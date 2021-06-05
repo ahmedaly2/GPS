@@ -79,6 +79,30 @@ void init()
 	
 	// delays needed after each command
 }
+/*float distance(float x, float y, float required , float* xi , float* yi)
+{
+    float d;
+    if (required > d)
+    {
+    if ( z == 1 )
+    {
+        *xi = x;
+        *yi = y;
+        d = sqrt((x - xi) ^ 2 + (y - yi) ^ 2)
+        d = d + d;
+    }
+    else
+    {
+        d = sqrt((x - xi) ^ 2 + (y - yi) ^ 2)
+        d = d + d;
+        *xi = x;
+        *yi = y;
+    }
+    }
+    *z += 1;
+    return d;
+}
+*/
 
 
 int main()
