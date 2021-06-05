@@ -156,3 +156,9 @@ void init()
     GPIO_PORTA_AFSEL_R &= 0x1F;
     GPIO_PORTA_PCTL_R &= 0x1F;
 }
+int main()
+{
+    init();   //initialization fnc
+    seven_segment();   // seven segment function display 
+}
+
