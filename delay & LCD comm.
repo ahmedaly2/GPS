@@ -1,0 +1,30 @@
+void delay_ms(int n)
+{
+ int i,j;
+ for(i=0;i<n;i++)
+ for(j=0;j<3180;j++)
+ {}
+}
+
+/* Micro seconds delay function */
+void delay_us(int n)
+{
+ int i,j;
+ for(i=0;i<n;i++)
+ for(j=0;j<3;j++)
+ {}
+ }  
+ 
+void LCD_com(unsigned char com)
+{
+	
+	GPIO_PORTA_DATA_R=0;        //Rs=0 send command, Rw=0 write, E=0 initially enable=0 
+	delay_milisecond(1);
+	GPIO_PORTA_DATA_R |=0x40;   // E=1 (low to high) without affecting other pins
+  delay_milisecond(1);	
+	GPIO_PORTB_DATA_R=com;      // send command to the screen
+	delay_microsecond(1);
+	GPIO_PORTA_DATA_R=0;        // E=0 agian
+  delay_microsecond(1);
+	
+}
